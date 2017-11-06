@@ -23,12 +23,15 @@ Suppose we still shoved a very long string into this array. Will it have problem
 
 int main() {
     char str[3];
+//    char *str = (char *) malloc(3);
     printf("Put something in this unsafe 3 byte buffer:\n");
 
     scanf("%s", str);
 
     printf("This is now in buffer: %s\n", str);
     printf("String length: %d\n", (int) strlen(str));
+    
+//    free(str);
     return 0;
 }
 
